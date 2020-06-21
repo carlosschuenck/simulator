@@ -8,7 +8,7 @@ import { Button,
   Typography,
   Container,
   Grid } from '@material-ui/core';
-
+import { useHistory } from 'react-router-dom';
 
 interface Module {
   title: string,
@@ -16,24 +16,26 @@ interface Module {
   image: string,
   description: string
 }
-const HomePage: FunctionComponent = () => {
-
+const Home: FunctionComponent = () => {
+  const history = useHistory()
+  
   const modules: Module[] = [
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
-    { title: 'Juros Compostos', link: 'juro-composto', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
+    { title: 'Juros Compostos', link: 'juros-compostos', image: '/images/compound-interest.jpeg', description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. `},
   ]
 
   const moduleSize = 4;
 
   function redirect(uri: string){
-    console.log("redirect to", uri)
+    history.push(uri)
   }
+
   return (
     <>
       <Container>
@@ -79,4 +81,4 @@ const HomePage: FunctionComponent = () => {
   )
 }
 
-export default HomePage;
+export default Home;

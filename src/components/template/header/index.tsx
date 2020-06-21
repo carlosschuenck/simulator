@@ -15,6 +15,7 @@ import { AttachMoney, ChevronLeft, ChevronRight, Mail, Menu as MenuIcon } from '
 import clsx from 'clsx';
 import React, { FunctionComponent, useState } from 'react';
 import { useStyles } from '../styles';
+import { useHistory } from "react-router-dom";
 
 interface Module {
   title: string,
@@ -32,15 +33,16 @@ type Props = OwnProps;
 const Menu: FunctionComponent<any> = ({classes, theme}: Props) => {
 
   const [open, setOpen] = useState(false)
+  let history = useHistory();
   
   const modules: Module[] = [
     { title: 'Home', link: '', icon: 'home' },
-    { title: 'Juros Compostos', link: 'juro-composto', icon: 'juro-composto'},
+    { title: 'Juros Compostos', link: 'juros-compostos', icon: 'juros-compostos'},
   ];
 
   const iconOptions: any = {
     'home': <MenuIcon />,
-    'juro-composto': <AttachMoney />
+    'juros-compostos': <AttachMoney />
   }
 
   const getIconOfMenu = (icon: string) => {
@@ -48,7 +50,7 @@ const Menu: FunctionComponent<any> = ({classes, theme}: Props) => {
   }
 
   const redirect = (uri: string) => {
-    console.log("redirect to ", uri)
+    history.push(uri)
   }
 
   return (

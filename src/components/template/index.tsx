@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import Header from './header'
 import { useStyles } from './styles'
 import { withStyles } from '@material-ui/core'
-import HomePage from '../../pages/home'
+import Routes from '../../routes'
 const Template: FunctionComponent<any> = ({classes}) => {
   return (
   <>
@@ -11,8 +11,7 @@ const Template: FunctionComponent<any> = ({classes}) => {
     <div className={classes.root}>
       <main className={clsx(classes.content)}>
         <div className={classes.drawerHeader} />
-        {/* <Routes /> */}
-        <HomePage />
+        <Routes />
       </main>
     </div>
   </>
