@@ -2,13 +2,17 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Template from './components/template';
 import GlobalStyle from './styles/global';
+import { Provider } from 'react-redux'
+import store from './redux'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Template />
-      <GlobalStyle />
-    </BrowserRouter>
+    <Provider store={store}> 
+      <BrowserRouter>
+        <Template />
+        <GlobalStyle />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
