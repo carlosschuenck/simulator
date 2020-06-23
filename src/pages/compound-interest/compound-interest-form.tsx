@@ -13,10 +13,10 @@ interface DispatchProps {
 type Props = DispatchProps;
 
 const CompoundInterestForm: FunctionComponent<Props> = ({ calculateRequest }) => {
-  const [amountInvested, setAmountInvested] = useState('1000')
-  const [tax, setTax] = useState('1')
-  const [numberOfMonths, setNumberOfMonths] = useState('12')
-  const [monthlyContribution, setMonthlyContribution] = useState('150')
+  const [amountInvested, setAmountInvested] = useState('')
+  const [tax, setTax] = useState('')
+  const [numberOfMonths, setNumberOfMonths] = useState('')
+  const [monthlyContribution, setMonthlyContribution] = useState('')
 
 
   async function calculate(){
